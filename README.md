@@ -1,5 +1,12 @@
 The boo programming language (c) 2009 Rodrigo Barreto de Oliveira (rbo@acm.org)
 
+
+IMPORTANT NOTE
+==============
+
+This fork contains changes needed for the BooJs project.
+
+
 Building
 ========
 
