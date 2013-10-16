@@ -8,11 +8,8 @@ install:
   - echo "Installing Mono... (please wait)"
   # Make sure mono is installed,
   # pipe stdout to dev/null because qq is still too chatty
-  - sudo apt-get update -qq #> /dev/null
-  # mono-utils: pedump
-  - sudo apt-get install -qq mono-devel mono-utils #> /dev/null
-  - sudo apt-get install -qq nant #> /dev/null
-  - sudo apt-get install -qq nunit-console #> /dev/null
+  - sudo apt-get update -qq > /dev/null
+  - sudo apt-get install -qq mono-devel mono-utils nant nunit-console > /dev/null
   # Make sure root certificates are in place
   - mozroots --import --sync
 
