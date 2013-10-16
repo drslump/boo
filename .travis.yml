@@ -15,7 +15,8 @@ script:
 
 # Run Tests
 after_script:
- - mono --runtime=v4.0 lib/nunit/nunit-console.exe tests/build/*Tests.dll
+ # - mono --runtime=v4.0 lib/nunit/nunit-console.exe tests/build/*Tests.dll
+ - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/*Tests.dll
 
 # Notify development list when needed
 notifications:
