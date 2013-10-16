@@ -16,10 +16,11 @@ install:
 # Run the Build script
 script:
  - nant rebuild
- # - nant compile-tests
- # - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/
+ - nant compile-tests
+ - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/Boo.Lang.Compiler.Tests.dll
+ # These do not work. It can't find nunit assemblies
  # - nant test
- - mono --runtime=v4.0 /usr/lib/NAnt/NAnt.exe test
+ # - mono --runtime=v4.0 /usr/lib/NAnt/NAnt.exe test
 
 # Notify development list when needed
 notifications:
