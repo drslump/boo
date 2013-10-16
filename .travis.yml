@@ -5,7 +5,7 @@ language: c
 
 # Make sure mono is installed
 install:
- - echo "Installing Mono..."
+  - echo "Installing Mono... (please wait)"
   # Make sure mono is installed,
   # pipe stdout to dev/null because qq is still too chatty
   - sudo apt-get update -qq #> /dev/null
