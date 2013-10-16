@@ -6,7 +6,7 @@ language: c
 # Make sure mono is installed
 install:
  - echo "Installing Mono..."
- - sudo apt-get install mono-devel > /dev/null
+ - sudo apt-get install mono-devel nant  # > /dev/null
 
 # Run the Build script
 script:
