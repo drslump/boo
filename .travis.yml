@@ -6,16 +6,19 @@ language: c
 # Make sure mono is installed
 install:
  - echo "Installing Mono..."
- # mono-utils: pedump
- - sudo apt-get install mono-devel mono-utils nant  # > /dev/null
+  # Make sure mono is installed,
+  # pipe stdout to dev/null because qq is still too chatty
+  - sudo apt-get update -qq #> /dev/null
+  # mono-utils: pedump
+  - sudo apt-get install -qq mono-devel mono-utils #> /dev/null
+  - sudo apt-get install -qq nant #> /dev/null
+  - sudo apt-get install -qq nunit-console #> /dev/null
+  # Make sure root certificates are in place
+  - mozroots --import --sync
 
 # Run the Build script
 script:
  - nant rebuild
-
-# Run Tests
-after_script:
- # - mono --runtime=v4.0 lib/nunit/nunit-console.exe tests/build/*Tests.dll
  - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/*Tests.dll
 
 # Notify development list when needed
