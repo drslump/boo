@@ -19,7 +19,8 @@ install:
 # Run the Build script
 script:
  - nant rebuild
- - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/*Tests.dll
+ - nant compile-tests
+ - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/
 
 # Notify development list when needed
 notifications:
