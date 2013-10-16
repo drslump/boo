@@ -11,16 +11,13 @@ install:
   - sudo apt-get update -qq > /dev/null
   - sudo apt-get install -qq mono-devel mono-utils nant nunit-console > /dev/null
   # Make sure root certificates are in place
-  - mozroots --import --sync
+  - mozroots --import --sync > /dev/null
 
 # Run the Build script
 script:
  - nant rebuild
- - nant compile-tests
- - mono --runtime=v4.0 /usr/lib/nunit/nunit-console.exe tests/build/Boo.Lang.Compiler.Tests.dll
- # These do not work. It can't find nunit assemblies
+ # Running tests does not work :(
  # - nant test
- # - mono --runtime=v4.0 /usr/lib/NAnt/NAnt.exe test
 
 # Notify development list when needed
 notifications:
