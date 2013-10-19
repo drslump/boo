@@ -1,4 +1,4 @@
-# Travis-CI Build for BooJs
+# Travis-CI Build for Boo
 # see travis-ci.org for details
 
 language: c
@@ -22,7 +22,7 @@ script:
 # Notify development list when needed
 notifications:
  recipients:
-   - drslump@pollinimini.net
+   - boolang@googlegroups.com
  email:
    on_success: change
    on_failure: always
