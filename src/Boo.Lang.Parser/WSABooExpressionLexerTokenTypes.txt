@@ -1,4 +1,4 @@
-// $ANTLR 2.7.5 (20050517): src/Boo.Lang.Parser/wsabooel.g -> WSABooExpressionLexerTokenTypes.txt$
+// $ANTLR 2.7.5 (20050517): wsabooel.g -> WSABooExpressionLexerTokenTypes.txt$
 WSABooExpressionLexer    // output token vocab name
 ELIST=4
 DLIST=5
