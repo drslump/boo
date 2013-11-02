@@ -73,6 +73,7 @@ tokens
 	DO="do";	
 	ELIF="elif";
 	ELSE="else";
+	END="end";
 	ENSURE="ensure";
 	ENUM="enum";
 	EVENT="event";
@@ -2979,7 +2980,7 @@ slicing_expression returns [Expression e]
 		)
 		|
 		(
-			DOT 
+			DOT
 			(
 				(
 					memberName=member
@@ -3475,10 +3476,16 @@ protected ID_SUFFIX:
 ;
 
 LINE_CONTINUATION:
-	'\\'! NEWLINE
+	'\\' 
+	(
+		NEWLINE
+		| (' ' | '\t')+
+		| SL_COMMENT
+		| ML_COMMENT
+	)+
 	{ $setType(Token.SKIP); }
 	;
-	
+
 INT : 
   	("0x"(HEXDIGIT)+)(('l' | 'L') { $setType(LONG); })? |
   	DIGIT_GROUP
