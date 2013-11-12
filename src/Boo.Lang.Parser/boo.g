@@ -803,9 +803,14 @@ method [TypeMemberCollection container]
 	LPAREN parameter_declaration_list[parameters] RPAREN
 	attributes { AddAttributes(m.ReturnTypeAttributes); }
 	(AS rt=type_reference { m.ReturnType = rt; })?
-	begin_block_with_doc[m, body]
-		block[statements]
-	end[body]
+	(
+		(
+			begin_block_with_doc[m, body]
+				block[statements]
+			end[body]
+		)
+		| single_line_block[body] { body.Annotate("inline"); }
+	)
 	{ 
 		container.Add(typeMember);
 		m.EndSourceLocation = body.EndSourceLocation;
@@ -1372,12 +1377,14 @@ protected
 single_line_block[Block b]
 {
 	StatementCollection statements = b != null ? b.Statements : null;
+	Expression expr = null;
 	IToken lastEOL = null;
 }:
 	COLON
 	(
-		PASS |
-		(
+		PASS
+		| expr=array_or_expression { statements.Add(new ReturnStatement(expr)); }
+		| (
 			simple_stmt[statements]
 			(options { greedy = true; }: EOS (simple_stmt[statements])?)*
 		)
