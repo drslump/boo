@@ -130,6 +130,7 @@ namespace Boo.Lang.Compiler.Steps
 		override public void LeaveBinaryExpression(BinaryExpression node)
 		{
 			if (BinaryOperatorType.Assign == node.Operator
+				&& (node.ParentNode.NodeType != NodeType.ReturnStatement)
 				&& (node.Right.NodeType != NodeType.TryCastExpression)
 				&& (IsTopLevelOfConditional(node)))
 			{
