@@ -95,6 +95,19 @@ namespace Boo.Lang.Compiler.Steps
 
 		override public void LeaveProperty(Property node)
 		{
+			// The parser will automatically convert inlined expressions to 
+			// a return statement. Make sure we undo that transformation for
+			// the setters.
+			if (null != node.Setter)
+			{
+				var stmts = (StatementCollection)node.Setter.Body.Statements;
+				if (stmts.Count == 1 && stmts.First.NodeType == NodeType.ReturnStatement)
+				{
+					var rst = (ReturnStatement)stmts.First;
+					stmts.Replace(rst, new ExpressionStatement(rst.Expression));
+				}
+			}
+
 			NormalizeDefaultItemProperty(node);
 			NormalizePropertyModifiers(node);
 
