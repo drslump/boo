@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Variables - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Variables";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Variables</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#using-booish-as-a-calculator">Using Booish as a Calculator</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#types-of-numbers">Types of Numbers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#characters-and-strings">Characters and Strings</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#string-interpolation">String Interpolation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#booleans">Booleans</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#object-type">Object Type</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#declaring-a-type">Declaring a Type</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#list-of-value-types">List of Value Types</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercises">Exercises</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Primer &raquo;</li>
+        
+      
+    
+    <li>Variables</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="using-booish-as-a-calculator">Using Booish as a Calculator</h2>
+<p>There are four basic mathematical operators: addition <code>+</code>, subtraction <code>-</code>, multiplication <code>*</code>, and 
+division <code>/</code>. There are more than just these, but that's what will be covered now.</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; 2 + 4 // This is a comment
+    6
+    &gt;&gt;&gt; 2 * 4 # So is this also a comment
+    8
+    &gt;&gt;&gt; 4 / 2 /* This is also a comment */
+    2
+    &gt;&gt;&gt; (500/10)*2
+    100
+    &gt;&gt;&gt; 7 / 3 // Integer division
+    2
+    &gt;&gt;&gt; 7 % 3 // Take the remainder
+    1
+    &gt;&gt;&gt; -7 / 3
+    -2
+</code></pre>
+
+<p>You may have noticed that there are 3 types of comments available, <code>//</code>, <code>#</code>, and <code>/* */</code>. These do
+not cause any affect whatsoever, but help you when writing your code.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>When doing single-line comments, use <code>//</code> instead of <code>#</code></p>
+</div>
+<p>You may have noticed that 7 / 3 did not give 2.333..., this is because you were dividing two integers together.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Integer</strong> - Any positive or negative number that does not include a fraction or decimal,
+including zero.</p>
+</div>
+<p>The way computers handle integer division is by rounding to the floor afterwards.</p>
+<p>In order to have decimal places, you must use a floating-point number.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Floating point Number</strong> - Often referred to in mathematical terms as a "rational" number,
+this is just a number that can have a fractional part.</p>
+</div>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; 7.0 / 3.0 // Floating point division
+    2.33333333333333
+    &gt;&gt;&gt; -8.0 / 5.0
+    -1.6
+</code></pre>
+
+<p>If you give a number with a decimal place, even if it's .0, it become a floating-point number.</p>
+<h2 id="types-of-numbers">Types of Numbers</h2>
+<p>There are 3 kinds of floating point numbers, <code>single</code>, <code>double</code>, and <code>decimal</code>.</p>
+<p>The differences between <code>single</code> and <code>double</code> is the size they take up. <code>double</code> is prefered in most situations.</p>
+<p>These two also are based on the number 2, which can cause some problems when working with our base-10 number system.</p>
+<p>Ususally this is not the case, but in delecate situations like banking, it would not be wise to lose a cent or two
+on a multi-trillion dollar contract.</p>
+<p>Thus <code>decimal</code> was created. It is a base-10 number, which means that we wouldn't lose that precious penny.</p>
+<p>In normal situations, <code>double</code> is perfectly fine. For a higher precision, a <code>decimal</code> should be used.
+Integers, which we covered earlier, have many more types to them.</p>
+<p>They also have the possibility to be "unsigned", which means that they must be non-negative.</p>
+<p>The size goes in order as such: <code>byte</code>, <code>short</code>, <code>int</code>, and <code>long</code>.</p>
+<p>In most cases, you will be using <code>int</code>, which is the default.</p>
+<h2 id="characters-and-strings">Characters and Strings</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Character</strong> - A written symbol that is used to represent speech.</p>
+</div>
+<p>All the letters in the alphabet are characters. All the numbers are characters. All the symbols
+of the Mandarin language are characters. All the mathematical symbols are characters.</p>
+<p>In Boo/.NET, characters are internally encoded as UTF-16, or <a href="http://www.unicode.org/">Unicode</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>String</strong> - A linear sequence of characters.</p>
+</div>
+<p>The word "apple" can be represented by a <code>string</code>.</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; s = &quot;apple&quot;
+    'apple'
+    &gt;&gt;&gt; print s
+    apple
+    &gt;&gt;&gt; s += &quot; banana&quot;
+    'apple banana'
+    &gt;&gt;&gt; print s
+    apple banana
+    &gt;&gt;&gt; c = char('C')
+    C
+    &gt;&gt;&gt; print c
+    C
+</code></pre>
+
+<p>Now you probably won't be using <code>chars</code> much, it is more likely you will be using <code>strings</code>.</p>
+<p>To declare a <code>string</code>, you have one of three ways.</p>
+<ol>
+<li>using double quotes. "apple"</li>
+<li>using single quotes. 'apple'</li>
+<li>using tripled double quotes. """apple"""</li>
+</ol>
+<p>The first two can span only one line, but the tribbled double quotes can span multiple lines.</p>
+<p>The first two also can have backslash-escaping. The third takes everything literally.</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; print &quot;apple\nbanana&quot;
+    apple
+    banana
+    &gt;&gt;&gt; print 'good\ttimes'
+    good      times
+    &gt;&gt;&gt; print &quot;&quot;&quot;Leeroy\Jenkins&quot;&quot;&quot;
+    Leeroy\Jenkins
+</code></pre>
+
+<p>Common escapes are:</p>
+<ul>
+<li>{{ ... }} literal backslash</li>
+<li>\n newline</li>
+<li>\r carriage return</li>
+<li>\t tab</li>
+</ul>
+<p>If you are declaring a double-quoted <code>string</code>, and you want a double quote inside it, also use a backslash.</p>
+<p>Same goes for the single-quoted <code>string</code>.</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; print &quot;The man said \&quot;Hello\&quot;&quot;
+    The man said &quot;Hello&quot;
+    &gt;&gt;&gt; print 'I\'m happy'
+    I'm happy
+</code></pre>
+
+<p><code>strings</code> are immutable, which means that the characters inside them can never change. You would have to
+recreate the <code>string</code> to change a <code>character</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Immutable</strong> - Not capable of being modified after it is created. It is an error to
+attempt to modify an immutable object. The opposite of immutable is mutable.</p>
+</div>
+<h2 id="string-interpolation">String Interpolation</h2>
+<p>String interpolation allows you to insert the value of almost any valid boo expression inside a <code>string</code>
+by preceeding a lonesome variable name with $, or quoting an expression with $().</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; name = &quot;Santa Claus&quot;
+    Santa Claus
+    &gt;&gt;&gt; print &quot;Hello, $name!&quot;
+    Hello, Santa Claus!
+    &gt;&gt;&gt; print &quot;2 + 2 = $(2 + 2)&quot;
+    2 + 2 = 4
+</code></pre>
+
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>String Interpolation is the preferred way of adding <code>strings</code> together. It is preferred over
+simple <code>string</code> addition.</p>
+</div>
+<p>String Interpolation can function in double-quoted <code>strings</code>, including tripled double-quoted <code>string</code>.</p>
+<p>It does not work in single-quoted <code>strings</code>.</p>
+<p>To stop String Interpolation from happening, just escape the dollar sign: \${} or alternatively use
+backtick quoted strings:</p>
+<pre><code class="boo">print `not $interpolated!`
+</code></pre>
+
+<h2 id="booleans">Booleans</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Boolean</strong> - A value of <code>true</code> or <code>false</code> represented internally in binary notation.</p>
+</div>
+<p>Boolean values can only be <code>true</code> or <code>false</code>, which is very handy for conditional statements, covered in
+the next section.</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; b = true
+    true
+    &gt;&gt;&gt; print b
+    True
+    &gt;&gt;&gt; b = false
+    false
+    &gt;&gt;&gt; print b
+    False
+</code></pre>
+
+<h2 id="object-type">Object Type</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Object</strong> - The central concept in the object-oriented programming paradigm.</p>
+</div>
+<p>Everything in Boo/.NET is an object.</p>
+<p>Although some are value types, like numbers and characters, these are still objects.</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; o as object
+    &gt;&gt;&gt; o = 'string'
+    'string'
+    &gt;&gt;&gt; print o
+    string
+    &gt;&gt;&gt; o = 42
+    42
+    &gt;&gt;&gt; print o
+    42
+</code></pre>
+
+<p>The problem with <code>objects</code> is that you can't implicitly expect a <code>string</code> or an <code>int</code>.</p>
+<p>If I were to do that same sequence without declaring <code>o as object</code>,</p>
+<pre><code class="boo">    $ booish
+    &gt;&gt;&gt; o = 'string'
+    'string'
+    &gt;&gt;&gt; print o
+    string
+    &gt;&gt;&gt; o = 42
+    --------^
+    ERROR: Cannot convert 'System.Int32' to 'System.String'.
+</code></pre>
+
+<p>This static typing keeps the code safe and reliable.</p>
+<h2 id="declaring-a-type">Declaring a Type</h2>
+<p>In the last section, you issued the statement <code>o as object</code>.</p>
+<p>This can work with any type and goes with the syntax <code>&lt;variable&gt; as &lt;type&gt;</code>.</p>
+<p><code>&lt;type&gt;</code> can be anything from an <code>int</code> to a <code>string</code> to a <code>date</code> to a <code>bool</code> to something which
+you defined yourself, but those will be discussed later.
+In most cases, Boo will be smart and implicitly figure out what you wanted.</p>
+<p>The code <code>i = 25</code> is the same thing as <code>i as int = 25</code>, just easier on your wrists.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Unless you are declaring a variable beforehand, or declaring it of a different type,
+don't explicitly state what kind of variable it is. (ie: use <code>i = 25</code> instead of
+<code>i as int = 25</code>)</p>
+</div>
+<h2 id="list-of-value-types">List of Value Types</h2>
+<table><tbody>
+<tr>
+<th><p> Boo type </p></th>
+<th><p> .NET Framework type </p></th>
+<th><p> Signed? </p></th>
+<th><p> Size in bytes </p></th>
+<th><p> Possible Values </p></th>
+</tr>
+<tr>
+<td><p> sbyte </p></td>
+<td><p> System.Sbyte </p></td>
+<td><p> Yes </p></td>
+<td><p> 1 </p></td>
+<td><p> -128 to 127 </p></td>
+</tr>
+<tr>
+<td><p> short </p></td>
+<td><p> System.Int16 </p></td>
+<td><p> Yes </p></td>
+<td><p> 2 </p></td>
+<td><p> -32768 - 32767 </p></td>
+</tr>
+<tr>
+<td><p> int </p></td>
+<td><p> System.Int32 </p></td>
+<td><p> Yes </p></td>
+<td><p> 4 </p></td>
+<td><p> -2147483648 - 2147483647 </p></td>
+</tr>
+<tr>
+<td><p> long </p></td>
+<td><p> System.Int64 </p></td>
+<td><p> Yes </p></td>
+<td><p> 8 </p></td>
+<td><p> -9223372036854775808 - 9223372036854775807 </p></td>
+</tr>
+<tr>
+<td><p> byte </p></td>
+<td><p> System.Byte </p></td>
+<td><p> No </p></td>
+<td><p> 1 </p></td>
+<td><p> 0 - 255 </p></td>
+</tr>
+<tr>
+<td><p> ushort </p></td>
+<td><p> System.Uint16 </p></td>
+<td><p> No </p></td>
+<td><p> 2 </p></td>
+<td><p> 0 - 65535 </p></td>
+</tr>
+<tr>
+<td><p> uint </p></td>
+<td><p> System.UInt32 </p></td>
+<td><p> No </p></td>
+<td><p> 4 </p></td>
+<td><p> 0 - 4294967295 </p></td>
+</tr>
+<tr>
+<td><p> ulong </p></td>
+<td><p> System.Uint64 </p></td>
+<td><p> No </p></td>
+<td><p> 8 </p></td>
+<td><p> 0 - 18446744073709551615 </p></td>
+</tr>
+<tr>
+<td><p> single </p></td>
+<td><p> System.Single </p></td>
+<td><p> Yes </p></td>
+<td><p> 4 </p></td>
+<td><p> Approximately &#177;1.5 x 10-45 - &#177;3.4 x 1038 with 7 significant figures </p></td>
+</tr>
+<tr>
+<td><p> double </p></td>
+<td><p> System.Double </p></td>
+<td><p> Yes </p></td>
+<td><p> 8 </p></td>
+<td><p> Approximately &#177;5.0 x 10-324 - &#177;1.7 x 10308 with 15 or 16 significant figures </p></td>
+</tr>
+<tr>
+<td><p> decimal </p></td>
+<td><p> System.Decimal </p></td>
+<td><p> Yes </p></td>
+<td><p> 12 </p></td>
+<td><p> Approximately &#177;1.0 x 10-28 - &#177;7.9 x 1028 with 28 or 29 significant figures </p></td>
+</tr>
+<tr>
+<td><p> char </p></td>
+<td><p> System.Char </p></td>
+<td><p> N/A </p></td>
+<td><p> 2 </p></td>
+<td><p> Any UTF-16 character </p></td>
+</tr>
+<tr>
+<td><p> bool </p></td>
+<td><p> System.Boolean </p></td>
+<td><p> N/A </p></td>
+<td><p> 1 </p></td>
+<td><p> true or false </p></td>
+</tr>
+</tbody></table>
+
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Never call a type by its .NET Framework type, use the builtin boo types.</p>
+</div>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>Declare some variables. Go wild.</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Conditionals/" class="btn btn-neutral float-right" title="Conditionals"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Starting-Out/" class="btn btn-neutral" title="Starting Out"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Starting-Out/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Conditionals/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

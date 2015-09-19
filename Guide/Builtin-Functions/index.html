@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Builtin Functions - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Builtin Functions";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Builtin Functions</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#array">array</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#booversion">BooVersion</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#enumerate">enumerate</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#gets">gets</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#iterator">iterator</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#join">join</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#map">map</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#matrix">matrix</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#print">print</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prompt">prompt</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#range">range</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#reversed">reversed</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#shell">shell</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#zip">zip</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Basic Features &raquo;</li>
+        
+      
+    
+    <li>Builtin Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Here is a summary of boo's built-in functions. The actual source code underlying these functions is in <a href="https://github.com/bamboo/boo/blob/master/src/Boo.Lang/Builtins.cs">Boo/Lang/Builtins.cs</a>.</p>
+<h3 id="array">array</h3>
+<p>array is a function used to create empty arrays or convert IEnumerable and ICollection objects to arrays. See <a href="https://github.com/bamboo/boo/wiki/Lists-And-Arrays">Lists And Arrays</a> for more info.</p>
+<p><code>array(object as IEnumerable)</code>:</p>
+<p>Converts an IEnumerable object to a non-specific (type of System.Object) array.</p>
+<p><code>array(type as Type, collection as ICollection)</code>:</p>
+<p>Converts any object that implements ICollection to an array of Type.</p>
+<p><code>array(type as Type, enumerable as IEnumerable)</code>:</p>
+<p>Converts any object that impelements IEnumerable to an array of Type.</p>
+<p><code>array(type as Type, size as int)</code>:</p>
+<p>Creates an empty array of the specified size.</p>
+<h3 id="booversion">BooVersion</h3>
+<p>BooVersion is a builtin property that returns the current version of boo that is running. It returns a System.Version class. See <a href="https://github.com/bamboo/boo/wiki/Getting-Boo-Version">Getting Boo Version</a> for more info.</p>
+<h3 id="enumerate">enumerate</h3>
+<p><code>enumerate(enumerable as object) as EnumerateEnumerator</code>:</p>
+<p>enumerate() is useful when you want to keep a running count while looping through items using a for loop:</p>
+<pre><code class="boo">mylist = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+for i as int, obj in enumerate(mylist):
+      print i, &quot;:&quot;, obj
+</code></pre>
+
+<h3 id="gets">gets</h3>
+<p>Returns a string of input that originates from Console.ReadLine() - AKA, "Standard Input."</p>
+<p><code>gets()</code>:</p>
+<p>The equivilent of Console.ReadLine(). See also prompt() below.</p>
+<h3 id="iterator">iterator</h3>
+<p><code>iterator(enumerable as object) as IEnumerable</code>:</p>
+<p>Usually not necessary, this builtin returns any Enumerator it can find in the object passed. For loops do this for you.</p>
+<h3 id="join">join</h3>
+<p>Always returning a string, join is a function that will walk through an enumerable object and put all of those elements into one string.</p>
+<p><code>join(enumerable as IEnumerable)</code>:</p>
+<p>Joins all of the elements in enumerable into one string, using a single space (ASCII Code: 32) between elements.</p>
+<p><code>join(enumerable as IEnumerable, seperator as Char)</code>:</p>
+<p>The same as join(enumerable as IEnumerable), except that seperator defines what character seperates each element in enumerable.</p>
+<h3 id="map">map</h3>
+<p>map returns an enumerable object that applies a specific function to each element in an enumerable object.</p>
+<p><code>map(enumerable as IEnumerable, function as ICallable)</code>:</p>
+<p>Taking an enumerable object such as a list or a collection, it returns an IEnumerable object that applies "function" to each element in the array.</p>
+<p>Examples:</p>
+<pre><code class="boo">def HardRock(item):
+    return &quot;$item totally rocks out, man!&quot;
+
+wyclefSongs = (&quot;Two wrongs&quot;, &quot;Dirty Dancing&quot;)
+
+x = map(wyclefSongs, HardRock)
+for y in x:
+    print y
+
+//another example using a multiline anonymous closure:
+newlist = map([1,2,3,4,5,6]) def (x as int):
+    return x*x*x
+</code></pre>
+
+<p>Output:</p>
+<pre><code>Two wrongs totally rocks out, man!
+Dirty Dancing totally rocks out, man!
+</code></pre>
+
+<h3 id="matrix">matrix</h3>
+<p>See <a href="https://github.com/bamboo/boo/wiki/Multidimensional-Arrays">Multidimensional Arrays</a> for more info, but here is a basic example:</p>
+<p><code>matrix(elementType as Type, length of first dimension as int, length of second dimension as int)</code>:</p>
+<p>Creates a multidimensional array of type elementType with the specifications of length.</p>
+<p>Examples</p>
+<pre><code class="boo">foo = matrix(int, 2, 2)
+foo[0, 0] = 0
+foo[0, 1] = 1
+foo[1, 0] = 2
+foo[1, 1] = 3
+
+print join(foo) //prints &quot;0, 1, 2, 3&quot;
+/* Looks like,
+[0, 1
+ 2, 3]
+*/
+</code></pre>
+
+<h3 id="print">print</h3>
+<p>Prints an object to Standard Out. The equivilent of Console.WriteLine</p>
+<p><code>print(object as Object)</code>:</p>
+<p>The equivilent of Console.WriteLine()</p>
+<h3 id="prompt">prompt</h3>
+<p>Prompts the user for information.</p>
+<p><code>prompt(query as string)</code>:</p>
+<p>Prints query to standard output, then waits for a user to 'respond.' Returns a string containing what the user has typed.</p>
+<h3 id="range">range</h3>
+<p>A mysterious, somewhat exciting function that returns an enumerable object containing a list of elements such as 1 to 10 or 0 to 5 or 77 to 6.</p>
+<p><code>range(max as int)</code>:</p>
+<p>Returns an IEnumerable object that contains elements from 0 to max - 1.</p>
+<pre><code class="boo">#This prints 0 through 9:
+for i in range(10):
+    print i
+</code></pre>
+
+<p><code>range(begin as int, end as int)</code>:</p>
+<p>Returns an IEnumerable object that contains elements from begin to end - 1.</p>
+<p><code>range(begin as int, end as int, step as int)</code>:</p>
+<p>Returns an IEnumerable object that contains all of the elements from begin to end - 1 that match the interval of step.</p>
+<p>Example:</p>
+<pre><code class="boo">for i in range(0, 10, 2):
+    print i
+</code></pre>
+
+<p>Output:</p>
+<pre><code>0
+2
+4
+6
+8
+</code></pre>
+
+<h3 id="reversed">reversed</h3>
+<p><code>reversed(enumerable as object) as IEnumerable</code>:</p>
+<p>Returns items in an enumerable in reverse order.</p>
+<h3 id="shell">shell</h3>
+<p>shell is used for invoking processes and inspecting their output.</p>
+<p><code>shell(filename as string, arguments as string)</code>:</p>
+<p>Invoke an application (filename) with the arguments (arguments) specified. Returns a string containing the program's output to Standard Out (aka, the console)</p>
+<p><code>shellm(filename as string, arguments as (string) )</code>:</p>
+<p>Invoke an application (filename) with an array of arguments (arguments); returns a string containing program's output.</p>
+<p><code>shellp(filename as string, arguments as string)</code>:</p>
+<p>Starts a process specified by filename with the arguments provided and returns a Process object representing the newly born process.</p>
+<h3 id="zip">zip</h3>
+<p>zip returns an IEnumerable object that interleaves the two arrays.</p>
+<p><code>zip(first as IEnumerable, second as IEnumerable)</code>:</p>
+<p>zip will return an IEnumerable object, wherein each element of the IEnumerable object will be a one dimensional array containing two elements; the first element will be an element located in "firstNames" and the second will be an element located in "lastNames."</p>
+<p>Example:</p>
+<pre><code class="boo">firstNames = (&quot;Charles&quot;, &quot;Joe&quot;, &quot;P&quot;)
+lastNames = (&quot;Whittaker&quot;, &quot;Manson&quot;, &quot;Diddy&quot;)
+
+x = zip(firstNames, lastNames)
+for y in x:
+    print join(y)
+        //print y[0], y[1]
+</code></pre>
+
+<p>Output:</p>
+<pre><code>Charles Whittaker
+Joe Manson
+P Diddy
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Developing-in-Net/" class="btn btn-neutral float-right" title="Developing in Net"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Comments/" class="btn btn-neutral" title="Comments"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Comments/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Developing-in-Net/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

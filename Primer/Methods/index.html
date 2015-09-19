@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Methods - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Methods";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Methods</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#defining-a-method">Defining a Method</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#class-constructor-and-destructor">Class Constructor and Destructor</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#method-modifiers">Method Modifiers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#member-visibility">Member Visibility</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#declaring-properties-in-the-constructor">Declaring Properties in the Constructor</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercises">Exercises</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Primer &raquo;</li>
+        
+      
+    
+    <li>Methods</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Method</strong> - A function exclusively associated with a class.</p>
+</div>
+<h2 id="defining-a-method">Defining a Method</h2>
+<p>Methods must be defined in <code>classes</code>. They are declared just like functions are.</p>
+<pre><code class="boo">class Cat:
+    def Roar():
+        print &quot;Meow!&quot;
+
+cat = Cat()
+cat.Roar()
+
+// Output: Meow!
+</code></pre>
+
+<p>An object of <code>Cat</code> must be instanced, then its methods can be called.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Names of methods should always be verbs. They should also be declared in PascalCase.</p>
+</div>
+<h2 id="class-constructor-and-destructor">Class Constructor and Destructor</h2>
+<p>Constructors and Destructors are special methods that are called on when a <code>class</code> is being instanced or destroyed, respectively. Both are optional.</p>
+<pre><code class="boo">class Cat:
+    def constructor():
+        _name = 'Whiskers'
+
+    def destructor():
+        print &quot;$_name is no more... RIP&quot;
+
+    [Getter(Name)]
+    _name as string
+
+cat = Cat()
+print cat.Name
+
+// Output:
+// Whiskers
+// Whiskers is no more... RIP
+</code></pre>
+
+<p>If a constructor has arguments, then they must be supplied when instancing. Destructors cannot have arguments.</p>
+<pre><code class="boo">class Cat:
+    def constructor(name as string):
+        _name = name
+
+    [Getter(Name)]
+    _name as string
+
+cat = Cat(&quot;Buttons&quot;)
+print cat.Name
+
+// Output: Buttons
+</code></pre>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not depend on the destructor to always be called.</p>
+</div>
+<h2 id="method-modifiers">Method Modifiers</h2>
+<table><tbody>
+<tr>
+<th><p> Modifier </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> <code>abstract</code> </p></td>
+<td><p> an <code>abstract</code> method has no implementation, which requires that an inheriting class implements it. </p></td>
+</tr>
+<tr>
+<td><p> <code>static</code> </p></td>
+<td><p> a <code>static</code> method is common to the entire <code>class</code>, which means that it can be called without ownership of a single instance of the <code>class</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>virtual</code> </p></td>
+<td><p> See <a href="./Boo-Primer:-%5BPart-10%5D-Polymorphism">Part 10 - Polymorphism, or Inherited Methods</a>  </p></td>
+</tr>
+<tr>
+<td><p> <code>override</code> </p></td>
+<td><p> See <a href="./Boo-Primer:-%5BPart-10%5D-Polymorphism">Part 10 - Polymorphism, or Inherited Methods</a> </p></td>
+</tr>
+</tbody></table>
+
+<p>All these modifiers also apply to properties (If they are explicitly declared).</p>
+<p><code>static</code> can also apply to fields.</p>
+<pre><code class="boo">class Animal:
+    def constructor():
+        _currentId += 1
+        _id = _currentId
+
+    [Getter(Id)]
+    _id as int
+
+    static _currentId = 0
+</code></pre>
+
+<p>This will cause the <code>Id</code> to increase whenever an <code>Animal</code> is instanced, giving each <code>Animal</code> their own, unique <code>Id</code>.</p>
+<p>All the methods defined in an <code>interface</code> are automatically declared abstract.</p>
+<p><code>Abstract</code> methods in a <code>class</code> must have a blank code block in its declaration.</p>
+<pre><code class="boo">class Feline:
+    abstract def Eat():
+        pass
+
+interface IFeline:
+    def Eat()
+</code></pre>
+
+<p>Both declare roughly the same thing.</p>
+<h2 id="member-visibility">Member Visibility</h2>
+<table><tbody>
+<tr>
+<th><p> Visibility Level </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> <code>public</code> </p></td>
+<td><p> Member is fully accessible to all types. </p></td>
+</tr>
+<tr>
+<td><p> <code>protected</code> </p></td>
+<td><p> Member is only visible to this class and inheriting classes. </p></td>
+</tr>
+<tr>
+<td><p> <code>private</code> </p></td>
+<td><p> Member is only visible to this class. </p></td>
+</tr>
+<tr>
+<td><p> <code>internal</code> </p></td>
+<td><p> Member is only visible to classes in the same assembly. </p></td>
+</tr>
+</tbody></table>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Important Information:</strong> All fields are by default <code>protected</code>. All methods, properties, and events are by default <code>public</code>.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Fields are typically either <code>protected</code> or <code>private</code>. Usually instead of
+making a public field, you might make a public property that wraps access
+to the field instead. This allows subclasses to possibly override behavior.</p>
+</div>
+<p>Methods can have any visibility.</p>
+<p>Properties can have any visibility, and typically have both a getter and a setter, or only a getter. Instead of a set only property, consider using a method instead (like "SetSomeValue(val as int)").</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It is recommended you prefix field names with an underscore if it is a private field.</p>
+</div>
+<h2 id="declaring-properties-in-the-constructor">Declaring Properties in the Constructor</h2>
+<p>One very nice feature that boo offers is being able to declare the values of properties while they are being instanced.</p>
+<pre><code class="boo">class Box:
+    def constructor():
+        pass
+
+    [Property(Value)]
+    _value as object
+
+box = Box(Value: 42)
+print box.Value
+
+// Output: 42
+</code></pre>
+
+<p>The constructor didn't take any arguments, yet the <code>Value: 42</code> bit declared Value to be 42, all in a tighly compact, but highly readable space.</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>Create two classes, <code>Predator</code> and <code>Prey</code>. To the <code>Predator</code> class, add an <code>Eat</code> method that eats the <code>Prey</code>. Do not let the <code>Prey</code> be eaten twice.</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Polymorphism/" class="btn btn-neutral float-right" title="Polymorphism"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Classes/" class="btn btn-neutral" title="Classes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Classes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Polymorphism/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

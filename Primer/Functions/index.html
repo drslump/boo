@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Functions - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Functions";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Functions</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#builtin-functions">Builtin Functions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#defining-your-own-functions">Defining Your Own Functions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#arguments">Arguments</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#function-overloading">Function Overloading</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#variable-arguments">Variable Arguments</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercises">Exercises</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Primer &raquo;</li>
+        
+      
+    
+    <li>Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Function</strong> - A sequence of code which performs a specific task, as part of a larger program, and is grouped as one, or more, statement blocks.</p>
+</div>
+<h2 id="builtin-functions">Builtin Functions</h2>
+<p>You have already seen a few functions. <code>range()</code>, <code>print()</code>, and <code>join()</code>.</p>
+<p>These are functions built into Boo.</p>
+<p>Here's a list of all the builtin functions that Boo offers:</p>
+<table><tbody>
+<tr>
+<th><p> Name </p></th>
+<th><p> Description </p></th>
+<th><p> Syntax example </p></th>
+</tr>
+<tr>
+<td><p> <code>print</code> </p></td>
+<td><p> Prints an <code>object</code> to Standard Out. The equivilent of <code>System.Console.WriteLine</code> </p></td>
+<td><p> <code>print("hey")</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>gets</code> </p></td>
+<td><p> Returns a <code>string</code> of input that originates from <code>System.Console.ReadLine()</code> - Standard Input </p></td>
+<td><p> <code>input = gets()</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>prompt</code> </p></td>
+<td><p> Prompts the user for information. </p></td>
+<td><p> <code>input = prompt("How are you? ")</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>join</code> </p></td>
+<td><p> Walk through an <code>IEnumerable</code> <code>object</code> and put all of those elements into one string. </p></td>
+<td><p> <code>join([1, 2, 3, 4, 5]) == "1 2 3 4 5"</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>map</code> </p></td>
+<td><p> Returns an <code>IEnumerable</code> <code>object</code> that applies a specific function to each element in another <code>IEnumerable</code> <code>object</code>. </p></td>
+<td><p> <code>map([1, 2, 3, 4, 5], func)</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>array</code> </p></td>
+<td><p> Used to create an empty <code>array</code> or convert <code>IEnumerable</code> and <code>ICollection objects</code> to an <code>array</code> </p></td>
+<td><p> <code>array(int, [1, 2, 3, 4, 5]) == (1, 2, 3, 4, 5)</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>matrix</code> </p></td>
+<td><p> Creates a multidimensional <code>array</code>. See 
+<a href="https://github.com/bamboo/boo/wiki/Multidimensional-Arrays">
+Multidimensional Arrays for more info. </p></td>
+<td><p> <code>matrix(int, 2, 2)</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>iterator</code> </p></td>
+<td><p> Creates an <code>IEnumerable</code> from an <code>object</code> </p></td>
+<td><p> <code>List(iterator('abcde')) == ['a', 'b', 'c', 'd', 'e']</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>shellp</code> </p></td>
+<td><p> Start a <code>Process</code>. Returns a <code>Process</code> <code>object</code> </p></td>
+<td><p> <code>process = shellp("MyProgram.exe", "")</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>shell</code> </p></td>
+<td><p> Invoke an application. Returns a <code>string</code> containing the program's output to Standard Out </p></td>
+<td><p> <code>input = shell("echo hi there", "")</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>shellm</code> </p></td>
+<td><p> Execute the specified managed application in a new <code>AppDomain</code>. Returns a <code>string</code> containing the program's output to Standard Out </p></td>
+<td><p> <code>input = shellm("MyProgram.exe", (,))</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>enumerate</code> </p></td>
+<td><p> Creates an <code>IEnumerator</code> from another, but gives it a pairing of <code>(</code><em>index</em><code>,</code> <em>value</em><code>)</code> </p></td>
+<td><p> <code>List(enumerate(range(5, 8))) == [(0, 5), (1, 6), (2, 7)]</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>range</code> </p></td>
+<td><p> Returns an <code>IEnumerable</code> containing a list of <code>ints</code> </p></td>
+<td><p> <code>List(range(5)) == [0, 1, 2, 3, 4]</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>reversed</code> </p></td>
+<td><p> Returns an <code>IEnumerable</code> with its members in reverse order </p></td>
+<td><p> <code>List(reversed(range(5))) == [4, 3, 2, 1, 0]</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>zip</code> </p></td>
+<td><p> Returns an <code>IEnumerable</code> that is a "mesh" of two or more <code>IEnumerables</code>. </p></td>
+<td><p> <code>array(zip([1, 2, 3], [4, 5, 6])) == [(1, 4), (2, 5), (3, 6)]</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>cat</code> </p></td>
+<td><p> Concatenate two or more <code>IEnumerators</code> head-to-tail </p></td>
+<td><p> <code>List(cat(range(3), range(3, 6))) == [0, 1, 2, 3, 4, 5]</code> </p></td>
+</tr>
+</tbody></table>
+
+<p>These are all very handy to know. Not required, but it makes programming all that much easier.</p>
+<h2 id="defining-your-own-functions">Defining Your Own Functions</h2>
+<p>It's very simple to define your own functions as well.</p>
+<pre><code class="boo">def Hello():
+    return &quot;Hello, World!&quot;
+
+print Hello()
+
+// Output: Hello, World!
+</code></pre>
+
+<p>Now it's ok if you don't understand any of that, I'll go through it step-by-step.</p>
+<ol>
+<li><code>def Hello():</code></li>
+<li><code>def</code> declares that you are starting to declare a function. <code>def</code> is short for "define".</li>
+<li><code>Hello</code> is the name of the function. You could call it almost anything you wanted, as long as it doesn't have any spaces and doesn't start with a number.</li>
+<li><code>()</code> this means what kind of arguments the function will take. Since we don't accept any arguments, it is left blank.</li>
+<li><code>return "Hello, World!"</code></li>
+<li><code>return</code> is a keyword that lets the function know what to emit to its invoker.</li>
+<li><code>"Hello, World!"</code> is the string that the <code>return</code> statement will send.</li>
+<li><code>print Hello()</code></li>
+<li><code>print</code> is the happy little <code>print</code> macro that we covered before.</li>
+<li><code>Hello()</code> calls the <code>Hello</code> function with no <code>()</code> arguments.</li>
+</ol>
+<p>Like variables, function types are inferred.</p>
+<pre><code class="boo">def Hello():
+    return &quot;Hello, World!&quot;
+</code></pre>
+
+<p>will always return a string, so Boo will infer that string is its return type. You could have done this to achieve the same result:</p>
+<pre><code class="boo">def Hello() as string:
+    return &quot;Hello, World!&quot;
+</code></pre>
+
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If it is not obvious, specify the return type for a function.</p>
+</div>
+<p>If Boo cannot infer a return type, it will assume <code>object</code>. If there is no return type then the return type is called 'void', which basically means nothing. To have no return type you can leave off the <code>return</code>, or have a <code>return</code> with no expression. If there are multiple return}}s with different {{return types, it will return the closest common ancestor, often times <code>object</code> but not always.</p>
+<h2 id="arguments">Arguments</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Argument</strong> - A way of allowing the same sequence of commands to operate on different data without re-specifying the instructions.</p>
+</div>
+<p>Arguments are very handy, as they can allow a function to do different things based on the input.</p>
+<pre><code class="boo">def Hello(name as string):
+    return &quot;Hello, ${name}!&quot;
+
+print Hello(&quot;Monkey&quot;)
+
+// Output: Hello, Monkey!
+</code></pre>
+
+<p>Here it is again, step-by-step.</p>
+<ol>
+<li><code>def Hello(name as string):</code></li>
+<li><code>def</code> declares that you are starting to declare a function.</li>
+<li><code>Hello</code> is the name of the function. You could call it almost anything you wanted, as long as it doesn't have any spaces and doesn't start with a number.</li>
+<li><code>(name as string)</code> this means what kind of arguments the function will take. This function will take one argument: <code>name</code>. When you call the function, the <code>name</code> must be a string, otherwise you will get a compiler error - "The best overload for the method Hello is not compatible with the argument list '(The,Types, of, The, Parameters, Entered)'."</li>
+<li><code>return "Hello, ${name}!"</code></li>
+<li><code>return</code> is a keyword that exits the function, and optionally return a value to the caller.</li>
+<li><code>"Hello, ${name}!"</code> uses <a href="https://github.com/bamboo/boo/wiki/String-Interpolation">String Interpolation</a> to place the value of name directly into the string.</li>
+<li><code>print Hello("Monkey")</code></li>
+<li><code>print</code> is the happy little print macro that we covered <a href="https://github.com/bamboo/boo/wiki/Boo-Primer:-%5BPart-01%5D-Starting-Out">before</a>.</li>
+<li><code>Hello("Monkey")</code> calls the Hello function with the ("Monkey") argument.</li>
+</ol>
+<h2 id="function-overloading">Function Overloading</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Overloading</strong> - Giving multiple meanings to the same name, but making them distinguishable by context. For example, two procedures with the same name are overloading that name as long as the compiler can determine which one you mean from contextual information such as the type and number of parameters that you supply when you call it.</p>
+</div>
+<p>Function overloading takes place when a function is declared multiple times with different arguments.</p>
+<pre><code class="boo">def Hello():
+    return &quot;Hello, World!&quot;
+
+def Hello(name as string):
+    return &quot;Hello, ${name}!&quot;
+
+def Hello(num as int):
+    return &quot;Hello, Number ${num}!&quot;
+
+def Hello(name as string, other as string):
+    return &quot;Hello, ${name} and ${other}!&quot;
+
+print Hello()
+print Hello(&quot;Monkey&quot;)
+print Hello(2)
+print Hello(&quot;Cat&quot;, &quot;Dog&quot;)
+
+// Output: 
+// Hello, World!
+// Hello, Monkey!
+// Hello, Number 2!
+// Hello, Cat and Dog!
+</code></pre>
+
+<h2 id="variable-arguments">Variable Arguments</h2>
+<p>There is a way to pass an arbitrary number of arguments.</p>
+<pre><code class="boo">def Test(*args as (object)):
+    return args.Length
+
+print Test(&quot;hey&quot;, &quot;there&quot;)
+print Test(1, 2, 3, 4, 5)
+print Test(&quot;test&quot;)
+
+a = (5, 8, 1)
+print Test(*a)
+
+// Output: 
+// 2
+// 5
+// 1
+// 3
+</code></pre>
+
+<p>The star * lets it known that everything past that is arbitrary.</p>
+<p>It is also used to explode parameters, as in <code>print Test(*a)</code> causes 3 arguments to be passed.</p>
+<p>You can have required parameters before the *args, just like in any other function, but not after, as after all the required parameters are supplied the rest are past into your argument array.</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>Write a function that prints something nice if it is fed an even number and prints something mean if it is fed an odd number.</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Classes/" class="btn btn-neutral float-right" title="Classes"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Operators/" class="btn btn-neutral" title="Operators"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Operators/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Classes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

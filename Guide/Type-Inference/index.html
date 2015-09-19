@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Type Inference - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Type Inference";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Primer/Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Type Inference</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#variables">Variables</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#fields">Fields</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#properties">Properties</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#arrays">Arrays</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#for-statement-variables">For statement variables</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#overridden-methods">Overridden methods</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#method-return-types">Method return types</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#generators">Generators</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#a-word-of-caution-about-interfaces">A Word of Caution About Interfaces</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ok-so-where-do-i-have-to-declare-types-then">Ok. So where do I have to declare types then?</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Types and Structures &raquo;</li>
+        
+      
+    
+    <li>Type Inference</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Boo is a statically typed language.</p>
+<p>Static typing is about the ability to type check a program for type correctness.</p>
+<p>Static typing is about being able to deliver better runtime performance.</p>
+<p>Static typing is not about putting the burden of declaring types on the programmer as most mainstream languages do.</p>
+<p>The mechanism that frees the programmer from having to babysit the compiler is called <strong>type inference.</strong></p>
+<p>Type inference means you don't have to worry about declaring types everywhere just to make the compiler happy. Type inference means you can be productive without giving up the safety net of the type system nor sacrificing performance.</p>
+<p>Boo's type inference kicks in for newly declared variables and fields, properties, arrays, for statement variables, overriden methods, method return types and generators.</p>
+<h3 id="variables">Variables</h3>
+<p>Assignments can be used to introduce new variables in the current scope. The type for the new variable will be inferred from the expression on the right.</p>
+<pre><code class="boo">s1 = &quot;foo&quot; # declare new variable s1
+s2 = s1.Replace(&quot;f&quot;, &quot;b&quot;) # s1 is a string so Replace is cool
+</code></pre>
+
+<p>Only the first assignment to a variable is taken into account by the type inference mechanism.
+The following program is illegal:</p>
+<pre><code class="boo">s = &quot;I'm a string&quot; # s is bound with type string
+s = 42 # and although 42 is a really cool number s can only hold strings
+</code></pre>
+
+<h3 id="fields">Fields</h3>
+<pre><code class="boo">class Customer:
+
+    _name = &quot;&quot;
+</code></pre>
+
+<p>Declare the new field _name and initialize it with an empty string. The type of the field will be string.</p>
+<h3 id="properties">Properties</h3>
+<p>When a property does not declare a type it is inferred from its getter.</p>
+<pre><code class="boo">class BigBrain:
+      Answer:
+           get: return 42
+</code></pre>
+
+<p>In this case the type of the Answer property will be inferred as int.</p>
+<h3 id="arrays">Arrays</h3>
+<p>The type of an array is inferred as the <em>least generic type</em> that could safely hold all of its enclosing elements.</p>
+<pre><code class="boo">a = (1, 2) # a is of type (int)
+
+b = (1L, 2) # b is of type (long)
+
+c = (&quot;foo&quot;, 2) # c is of type (object)
+</code></pre>
+
+<h3 id="for-statement-variables">For statement variables</h3>
+<pre><code class="boo">names = (&quot; John &quot;,
+         &quot; Eric&quot;,
+         &quot;  Graham&quot;,
+         &quot;TerryG  &quot;,
+         &quot; TerryJ&quot;,
+         &quot; Michael&quot;)
+
+for name in names:
+    # name is typed string since we are iterating a string array
+    print name.Trim()  # Trim is cool, name is a string
+</code></pre>
+
+<p>This works even when with <strong>unpacking</strong>:</p>
+<pre><code class="boo">a = ( (1, 2), (3, 4) )
+
+for i, j in a:
+     print i+j  # + is cool since i and j are typed int
+</code></pre>
+
+<h3 id="overridden-methods">Overridden methods</h3>
+<p>When overriding a method, it is not necessary to declare its return type since it can be safely inferred from its super method.</p>
+<pre><code class="boo">class Customer:
+
+    override def ToString():
+         pass
+</code></pre>
+
+<h3 id="method-return-types">Method return types</h3>
+<p>The return type of a method will the <em>most generic type</em> among the types of the expressions used in return statements.</p>
+<pre><code class="boo">def spam():
+    return &quot;spam!&quot;
+
+print spam()*3
+# multiply operator is cool since spam() is inferred to return a string
+# and strings can be multiplied by integer values
+</code></pre>
+
+<pre><code class="boo">def ltuae(returnString as bool):
+    return &quot;42&quot; if returnString
+    return 42
+
+# ltuae is inferred to return object
+print ltuae(false)*3  # ERROR! don't know the meaning of the * operator
+</code></pre>
+
+<p>When a method does not declare a return type and includes no return statements it will be typed System.Void.</p>
+<h3 id="generators">Generators</h3>
+<pre><code class="boo">g = i*2 for i in range(3)
+
+# g is inferred to generate ints
+
+for i in g:
+    print i*2  # * operator is cool since i is inferred to be int
+
+# works with arrays too
+a = array(g) # a is inferred to be (int) since g delivers ints
+
+print a[0] + a[-1]  # int sum
+</code></pre>
+
+<h3 id="a-word-of-caution-about-interfaces">A Word of Caution About Interfaces<img alt="warning" src="http://docs.codehaus.org/s/en_GB/3278/15/_/images/icons/emoticons/warning.png" /></h3>
+<p>When implementing interfaces it's important to explicitly declare the signature of a method, property or event. The compiler will look only for exact matches.</p>
+<p>In the example below the class will be considered abstract since it does not provide an implementation with the correct signature:</p>
+<pre><code class="boo">namespace AllThroughTheDay
+
+interface IMeMineIMeMineIMeMine:
+
+    def AllThroughTheNight(iMeMine, iMeMine2, iMeMine3 as int)
+
+class EvenThoseTears(IMeMineIMeMineIMeMine):
+
+    def AllThroughTheNight(iMeMine, iMeMine2, iMeMine3):
+        pass
+
+e = EvenThoseTears()
+</code></pre>
+
+<h3 id="ok-so-where-do-i-have-to-declare-types-then">Ok. So where do I have to declare types then?<img alt="info" src="http://docs.codehaus.org/s/en_GB/3278/15/_/images/icons/emoticons/information.png" /></h3>
+<p>Let's say when.</p>
+<ul>
+<li>when the compiler as it exists today can't do it for you. Ex: parameter types, recursive and mutually recursive method/property/field definitions, return for abstract and interface methods, for untyped containers, properties with a only set defined</li>
+</ul>
+<pre><code class="boo">    abstract def Method(param /* as object */, i as int) as string:
+        pass
+
+    def fat([required(value &gt;= 0)] value as int) as int:
+        return 1 if value &lt; 2
+        return value*fat(value-1)
+
+    for i as int in [1, 2, 3]: # list is not typed
+        print i*2
+</code></pre>
+
+<ul>
+<li>when you don't want to express what the compiler thinks you do:</li>
+</ul>
+<pre><code class="boo">    def foo() as object:  # I want the return type to be object not string
+        # a common scenario is interface implementation
+        return &quot;a string&quot;
+
+    if bar:
+        a = 3 # a will be typed int
+    else:
+        a = &quot;42&quot; # uh, oh
+</code></pre>
+
+<ul>
+<li>when you want to access a member not exposed by the type assigned to an expression:</li>
+</ul>
+<pre><code class="boo">    f as System.IDisposable = foo()
+    f.Dispose()
+</code></pre>
+
+<ul>
+<li>when you want to use <a href="https://github.com/bamboo/boo/wiki/Duck-Typing">Duck Typing</a>:</li>
+</ul>
+<pre><code class="boo">    def CreateInstance(progid):
+        type = System.Type.GetTypeFromProgID(progid)
+        return type()
+</code></pre>
+
+<pre><code class="boo">    ie as duck = CreateInstance(&quot;InternetExplorer.Application&quot;)
+    ie.Visible = true
+    ie.Navigate(&quot;http://boo.codehaus.org/Type+Inference&quot;)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Casting-Types/" class="btn btn-neutral float-right" title="Casting Types"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Data-Types/" class="btn btn-neutral" title="Data Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Data-Types/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Casting-Types/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

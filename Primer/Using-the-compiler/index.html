@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using the compiler - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using the compiler";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Using the compiler</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#compiler-options">Compiler Options</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#using-nant">Using NAnt</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Primer &raquo;</li>
+        
+      
+    
+    <li>Using the compiler</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>The Boo Compiler is typically called in this fashion:</p>
+<p><code>booc &lt;options&gt; &lt;files&gt;</code></p>
+<h2 id="compiler-options">Compiler Options</h2>
+<table><tbody>
+<tr>
+<th><p> Option </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> <code>-v</code> </p></td>
+<td><p> Verbose </p></td>
+</tr>
+<tr>
+<td><p> <code>-vv</code> </p></td>
+<td><p> More Verbose </p></td>
+</tr>
+<tr>
+<td><p> <code>-vvv</code> </p></td>
+<td><p> Most Verbose </p></td>
+</tr>
+<tr>
+<td><p> <code>-r:</code><em>&lt;reference_name&gt;</em> </p></td>
+<td><p> Add a reference to your project </p></td>
+</tr>
+<tr>
+<td><p> <code>-t:</code><em>&lt;type_name_to_generate&gt;</em> </p></td>
+<td><p> Type of file to generate, can be either <code>exe</code> or <code>winexe</code> to make executables (.exe files), or <code>library</code> to make a .dll file </p></td>
+</tr>
+<tr>
+<td><p> <code>-p:</code><em>&lt;pipeline&gt;</em> </p></td>
+<td><p> Adds a step <em>&lt;pipeline&gt;</em> to the compile. </p></td>
+</tr>
+<tr>
+<td><p> <code>-c:</code><em>&lt;culture&gt;</em> </p></td>
+<td><p> Sets which <em>CultureInfo</em> to use. </p></td>
+</tr>
+<tr>
+<td><p> <code>-o:</code><em>&lt;output_file&gt;</em> </p></td>
+<td><p> Sets the name of the output file </p></td>
+</tr>
+<tr>
+<td><p> <code>-srcdir:</code><em>&lt;source_files&gt;</em> </p></td>
+<td><p> Specify where to find the source files. </p></td>
+</tr>
+<tr>
+<td><p> <code>-debug</code> </p></td>
+<td><p> Adds debug flags to your code. Good for non-production. (On by default) </p></td>
+</tr>
+<tr>
+<td><p> <code>-debug-</code> </p></td>
+<td><p> Does not add debug flags to your code. Good for production environment. </p></td>
+</tr>
+<tr>
+<td><p> <code>-debug-steps</code> </p></td>
+<td><p> See AST after each compilation step. </p></td>
+</tr>
+<tr>
+<td><p> <code>-resource:</code><em>&lt;resource_file&gt;</em><code>,</code><em>&lt;name&gt;</em> </p></td>
+<td><p> Add a resource file. <em>&lt;name&gt;</em> is optional. </p></td>
+</tr>
+<tr>
+<td><p> <code>-embedres:</code><em>&lt;resource_file&gt;</em><code>,</code><em>&lt;name&gt;</em> </p></td>
+<td><p> Add an embedded resource file. <em>&lt;name&gt;</em> is optional. </p></td>
+</tr>
+</tbody></table>
+
+<h2 id="using-nant">Using NAnt</h2>
+<p>When working on a large project with multiple files or libraries, it is a lot easier to use <a href="http://nant.sourceforge.net/">NAnt</a>. It is a free .NET build tool.</p>
+<p>To do the same command as above, you would create the following build file:</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+
+&lt;project name=&quot;Goomba&quot; default=&quot;build&quot;&gt;
+    &lt;target name=&quot;build&quot; depends=&quot;database&quot; /&gt;
+    &lt;target name=&quot;database&quot;&gt;
+        &lt;mkdir dir=&quot;bin&quot; /&gt;
+        &lt;booc output=&quot;bin/Database.dll&quot; target=&quot;library&quot;&gt;
+            &lt;references basedir=&quot;bin&quot;&gt;
+                &lt;include name=&quot;System.Data.dll&quot; /&gt;
+            &lt;/references&gt;
+            &lt;sources&gt;
+                &lt;include name=&quot;Database.boo&quot; /&gt;
+            &lt;/sources&gt;
+        &lt;/booc&gt;
+    &lt;/target&gt;
+&lt;/project&gt;
+</code></pre>
+
+<pre><code>$ nant
+NAnt 0.85 (Build 0.85.1869.0; rc2; 2/12/2005)
+Copyright (C) 2001-2005 Gerry Shaw
+http://nant.sourceforge.net
+
+Buildfile: file:///path/to/default.build
+Target framework: Microsoft .NET Framework 1.1
+Target(s) specified: build
+
+build:
+
+database:
+
+     [booc] Compiling 1 file(s) to /path/to/bin/Database.dll.
+
+BUILD SUCCEEDED
+
+Total time: 0.2 seconds.
+</code></pre>
+<p>And although that was a long and drawnout version of something so simple, it does make things a lot easier when dealing with multiple files. It also helps that if you make a change to your source files, you don't have to type a long <code>booc</code> phrase over again. The important part of the build file is the <code>&lt;booc&gt;</code> section. It relays commands to the compiler.</p>
+<p>There are four attributes available to use in it:</p>
+<table><tbody>
+<tr>
+<th><p> Attribute </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> <code>target</code> </p></td>
+<td><p> Output type, one of <code>library</code>, <code>exe</code>, <code>winexe</code>. Optional. Default: <code>exe</code>. </p></td>
+</tr>
+<tr>
+<td><p> <code>output</code> </p></td>
+<td><p> The name of the output assembly. <strong>Required</strong>. </p></td>
+</tr>
+<tr>
+<td><p> <code>pipeline</code> </p></td>
+<td><p> AssemblyQualifiedName for the CompilerPipeline type to use. Optional. </p></td>
+</tr>
+<tr>
+<td><p> <code>tracelevel</code> </p></td>
+<td><p> Enables compiler tracing, useful for debugging the compiler, one of: Off, Error, Warning, Info, Verbose. Optional. Default: Off. </p></td>
+</tr>
+</tbody></table>
+
+<p>You are most likely only to use <code>target</code> and <code>output</code>.</p>
+<p>For nested elements, you have 3 possibilities:</p>
+<table><tbody>
+<tr>
+<th><p> Nested Element </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> <code>&lt;sources&gt;</code> </p></td>
+<td><p> Source files. <strong>Required</strong>. </p></td>
+</tr>
+<tr>
+<td><p> <code>&lt;references&gt;</code> </p></td>
+<td><p> Assembly references. </p></td>
+</tr>
+<tr>
+<td><p> <code>&lt;resources&gt;</code> </p></td>
+<td><p> Embedded resources. </p></td>
+</tr>
+</tbody></table>
+
+<p>Inside these you are to put <include /> elements, as in the example.</p>
+<p>This is merely a brief overview of NAnt, please go to their website <a href="http://nant.sourceforge.net">http://nant.sourceforge.net</a> for more information.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Structure-of-a-project/" class="btn btn-neutral float-right" title="Structure of a project"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Duck-typing/" class="btn btn-neutral" title="Duck typing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Duck-typing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Structure-of-a-project/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

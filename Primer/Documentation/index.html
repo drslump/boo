@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Documentation";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Conditionals/">Conditionals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Documentation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#documentation-with-summary">Documentation with Summary</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#parameters">Parameters</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#long-parameter">Long Parameter</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#documentation-example">Documentation example</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Primer &raquo;</li>
+        
+      
+    
+    <li>Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A communicable material used to explain some attributes of an object, system or procedure.</p>
+</div>
+<p>I've saved the most important for last, as documentation is itself, just as important as the code which it describes.</p>
+<p>When documenting your code, be sure to remember:</p>
+<ol>
+<li>All your documents should be in English.</li>
+<li>Use full sentences.</li>
+<li>Avoid spelling/grammar mistakes.</li>
+<li>Use present tense.</li>
+</ol>
+<p>Documentation is placed in tripled double-quoted strings right below what you are documenting.</p>
+<h3 id="documentation-with-summary">Documentation with Summary</h3>
+<pre><code class="boo">def Hello():
+&quot;&quot;&quot;Says &quot;hello&quot; to the world.&quot;&quot;&quot;
+    print &quot;Hello, World!&quot;
+
+Hello()
+</code></pre>
+
+<p>That "docstring" is the least you can do to document your code. It gave a simple summary.</p>
+<p>If your docstring spans more than one line, then the quotes should go on their own lines.</p>
+<p>You may have noticed that 'Says "hello" to the world.' is not a full sentence. For the first sentence in a summary, you can imply "This member".</p>
+<p>Parameters should also be documented.</p>
+<h3 id="parameters">Parameters</h3>
+<pre><code class="boo">def Hello(name as string):
+&quot;&quot;&quot;
+Say &quot;hello&quot; to the given name.
+Param name: The name to say hello to.
+&quot;&quot;&quot;
+    print &quot;Hello, $name!&quot;
+
+Hello(&quot;Harry&quot;)
+</code></pre>
+
+<p>To read it to yourself, it goes as such: 'Say "hello" to the given name. Parameter name is defined as the name to say hello to.'</p>
+<p>This keeps in line with using full sentences. If describing the parameter takes more than one line, you should move it all to a new line and indent.</p>
+<h3 id="long-parameter">Long Parameter</h3>
+<pre><code class="boo">def Hello(name as string):
+&quot;&quot;&quot;
+Say &quot;hello&quot; to the given name.
+Param name:
+    The name to say hello to.
+    It might do other things as well.
+&quot;&quot;&quot;
+    print &quot;Hello, $name!&quot;
+</code></pre>
+
+<p>The same goes with any block.</p>
+<p>Here is a list of all the tags that can be used:</p>
+<table><tbody>
+<tr>
+<th><p> Tag </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> No tag </p></td>
+<td><p> A summary of the member. </p></td>
+</tr>
+<tr>
+<td><p> <code>Param</code> <code><em>&lt;name&gt;</em></code><code>:</code> <code><em>&lt;description&gt;</em></code> </p></td>
+<td><p> This specifies the parameter <code><em>&lt;name&gt;</em></code> of the method. </p></td>
+</tr>
+<tr>
+<td><p> <code>Returns:</code> <code><em>&lt;description&gt;</em></code> </p></td>
+<td><p> This describes what the method returns. </p></td>
+</tr>
+<tr>
+<td><p> <code>Remarks:</code> <code><em>&lt;text&gt;</em></code> </p></td>
+<td><p> This provides descriptive text about the member. </p></td>
+</tr>
+<tr>
+<td><p> <code>Raises</code> <code><em>&lt;exception&gt;</em></code><code>:</code> <code><em>&lt;description&gt;</em></code> </p></td>
+<td><p> Gives a reason why an <code>Exception</code> is raised. </p></td>
+</tr>
+<tr>
+<td><p> <code>Example:</code> <code><em>&lt;short_description&gt;</em></code><code>:</code> <code><em>&lt;code_block&gt;</em></code> </p></td>
+<td><p> Provides an example. </p></td>
+</tr>
+<tr>
+<td><p> <code>Include</code> <code><em>&lt;filename&gt;</em></code><code>:</code> <code><em>&lt;tagpath&gt;</em></code><code>[@</code><code><em>&lt;name&gt;</em></code><code>="</code><code><em>&lt;id&gt;</em></code><code>"]</code> </p></td>
+<td><p> Includes an excerpt from another file. </p></td>
+</tr>
+<tr>
+<td><p> <code>Permission</code> <code><em>&lt;permission&gt;</em></code><code>:</code> <code><em>&lt;description&gt;</em></code> </p></td>
+<td><p> Describe a required Permission. </p></td>
+</tr>
+<tr>
+<td><p> <code>See Also:</code> <code><em>&lt;reference&gt;</em></code> </p></td>
+<td><p> Lets you specify the reference that you might want to appear in a See Also section. </p></td>
+</tr>
+</tbody></table>
+
+<p>And a list of inline tags:</p>
+<table><tbody>
+<tr>
+<th><p> Tag </p></th>
+<th><p> Description </p></th>
+</tr>
+<tr>
+<td><p> <code>*</code> <code><em>&lt;item&gt;</em></code> <br class="atl-forced-newline"></br>
+<code>*</code> <code><em>&lt;item&gt;</em></code> <br class="atl-forced-newline"></br>
+<code>*</code> <code><em>&lt;item&gt;</em></code> </p></td>
+<td><p> Bullet list </p></td>
+</tr>
+<tr>
+<td><p> <code>#</code> <code><em>&lt;item&gt;</em></code> <br class="atl-forced-newline"></br>
+<code>#</code> <code><em>&lt;item&gt;</em></code> <br class="atl-forced-newline"></br>
+<code>#</code> <code><em>&lt;item&gt;</em></code> </p></td>
+<td><p> Numbered List </p></td>
+</tr>
+<tr>
+<td><p> <code>&lt;</code><code><em>&lt;reference&gt;</em></code><code>&gt;</code> </p></td>
+<td><p> Provides an inline link to a reference. e.g. &lt;int&gt; or &lt;string&gt; would link. </p></td>
+</tr>
+<tr>
+<td><p> <code>[</code><code><em>&lt;param_reference&gt;</em></code><code>]</code> </p></td>
+<td><p> References to a parameter of the method. </p></td>
+</tr>
+</tbody></table>
+
+<p>Here's some examples of proper documentation:</p>
+<h3 id="documentation-example">Documentation example</h3>
+<pre><code class="boo">import System
+
+class MyClass:
+&quot;&quot;&quot;Performs specific duties.&quot;&quot;&quot;
+    def constructor():
+    &quot;&quot;&quot;Initializes an instance of &lt;MyClass&gt;&quot;&quot;&quot;
+        _rand = Random()
+
+    def Commit():
+    &quot;&quot;&quot;Commits an action.&quot;&quot;&quot;
+        pass
+
+    def CalculateDouble(i as int) as int:
+    &quot;&quot;&quot;
+    Returns double the value of [i].
+    Parameter i: An &lt;int&gt; to be doubled.
+    Returns: Double the value of [i].
+    &quot;&quot;&quot;
+        return i * 2
+
+    def CauseError():
+    &quot;&quot;&quot;
+    Causes an error.
+    Remarks: This method has not been implemented.
+    Raises NotImplementedException: This has not been implemented yet.
+    &quot;&quot;&quot;
+        return NotImplementedException(&quot;CauseError() is not implemented&quot;)
+
+    def DoSomething() as int:
+    &quot;&quot;&quot;
+    Returns a number.
+    Example: Here is a short example:
+        print DoSomething()
+    Returns: An &lt;int&gt;.
+    See Also: MakeChaos()
+    &quot;&quot;&quot;
+        return 0
+
+    def MakeChaos():
+    &quot;&quot;&quot;
+    Creates Chaos.
+    Include file.xml: Foo/Bar[@id=&quot;entropy&quot;]
+    Permission Security.PermissionSet: Everyone can access this method.
+    &quot;&quot;&quot;
+        print &quot;I am making chaos: $(_rand.Next(100))&quot;
+
+    def Execute():
+    &quot;&quot;&quot;
+    Executes the protocol.
+    Does one of two things,
+    # Gets a sunbath.
+    # Doesn't get a sunbath.
+    &quot;&quot;&quot;
+        if _rand.Next(2) == 0:
+            print &quot;I sunbathe.&quot;
+        else:
+            print &quot;I decide not to sunbathe.&quot;
+
+    def Calculate():
+    &quot;&quot;&quot;
+    Does these things, in no particular order,
+    * Says &quot;Hello&quot;
+    * Looks at you
+    * Says &quot;Goodbye&quot;
+    &quot;&quot;&quot;
+        thingsToDo = [&quot;I look at you.&quot;, 'I say &quot;Hello.&quot;', 'I say &quot;Goodbye.&quot;']
+        while len(thingsToDo) &gt; 0:
+            num = _rand.Next(len(thingsToDo))
+            print thingsToDo[num]
+            thingsToDo.RemoveAt(num)
+
+    [Property(Name)]
+    _name as string
+    &quot;&quot;&quot;A name&quot;&quot;&quot; // documents the property, not the field
+
+    Age as int:
+    &quot;&quot;&quot;An age&quot;&quot;&quot;
+        get:
+            return _rand.Next(8) + 18
+
+    _age as int
+
+    _rand as Random
+</code></pre>
+
+<p>This should give you a good view on how to document your code.
+I think Dick Brandon said it best:</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Documentation is like sex: when it is good, it is very, very good; and when it is bad, it is better than nothing.</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Useful-Links/" class="btn btn-neutral float-right" title="Useful Links"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Structure-of-a-project/" class="btn btn-neutral" title="Structure of a project"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Structure-of-a-project/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Useful-Links/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

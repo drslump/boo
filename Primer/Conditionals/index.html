@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Conditionals - Boo documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Conditionals";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Boo documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Primer</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Starting-Out/">Starting Out</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Variables/">Variables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Conditionals</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#if-statement">If Statement</a></li>
+                
+                    <li><a class="toctree-l4" href="#multiple-if-statements">Multiple if statements</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#if-else-statement">If-Else Statement</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#if-elif-else-statement">If-Elif-Else Statement</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#unless-statement">Unless Statement</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#statement-with-modifier">Statement with Modifier</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#not-condition">Not Condition</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#combining-conditions">Combining Conditions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercises">Exercises</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Containers-and-Casting/">Containers and Casting</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Operators/">Operators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Methods/">Methods</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Polymorphism/">Polymorphism</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Namespaces/">Namespaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enumerations/">Enumerations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Functions-as-objects/">Functions as objects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Generators/">Generators</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Duck-typing/">Duck typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-compiler/">Using the compiler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Structure-of-a-project/">Structure of a project</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation/">Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Useful-Links/">Useful Links</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Language Guide</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Basic Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structure-of-a-Boo-Script/">Structure of a Boo Script</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Import/">Import</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Builtin-Functions/">Builtin Functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Using .NET's Standard Class Library</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Developing-in-Net/">Developing in Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/String-operations/">String operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Triple-Quoted-Strings/">Triple Quoted Strings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Regular-Expressions/">Regular Expressions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/XML-Serialization/">XML Serialization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generics/">Generics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Procedural Programming</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Functions/">Functions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Parameters/">Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Loops/">Loops</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Exception-Handling/">Exception Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Closures/">Closures</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Generators/">Generators</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Types and Structures</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Data-Types/">Data Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Type-Inference/">Type Inference</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Casting-Types/">Casting Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Duck-Typing/">Duck Typing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Callable-Types/">Callable Types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Structs/">Structs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Literals/">Literals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Lists-and-Arrays/">Lists and Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Multidimensional-Arrays/">Multidimensional Arrays</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Hashtables/">Hashtables</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Slicing/">Slicing</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Object Oriented features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Classes/">Classes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Fields-and-Properties/">Fields and Properties</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Interfaces/">Interfaces</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Operator-Overloading/">Operator Overloading</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Enums/">Enums</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced Features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Macros/">Macros</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Guide/Syntactic-Macros/">Syntactic Macros</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Micellanea</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">Faq</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Boo documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Primer &raquo;</li>
+        
+      
+    
+    <li>Conditionals</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/drslump/boo" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="if-statement">If Statement</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>if statement</strong> - A control statement that contains one or more Boolean expressions whose results determine whether to execute other statements within the If statement.</p>
+</div>
+<p>An <code>if</code> statement allows you to travel down multiple logical paths, depending on a condition given. If the condition given is <code>true</code>, the block of code associated with it will be run.</p>
+<pre><code class="boo">i = 5
+if i == 5:
+    print &quot;i is equal to 5.&quot;
+
+// Output: i is equal to 5.
+</code></pre>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Be careful</strong> notice the difference between <code>i = 5</code> and <code>i == 5</code>. The former is an <em>assignment</em>
+while the latter is a <em>comparison</em>. If you try an assignment while running a conditional, Boo will
+emit a warning.</p>
+</div>
+<p>You may have noticed that unlike other languages, there is no then-endif or do-end or braces { }. Blocks
+of code are determined in Boo by its indentation. By this, your code blocks will always be noticeable and
+readable.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Always use tabs for indentation.  In your editor, set the tab-size to view as 4 spaces.</p>
+</div>
+<p>You can have multiple code blocks within eachother as well.</p>
+<h3 id="multiple-if-statements">Multiple if statements</h3>
+<pre><code class="boo">i = 5
+if i &gt; 0:
+    print &quot;i is greater than 0.&quot;
+    if i &lt; 10:
+        print &quot;i is less than 10.&quot;
+        if i &gt; 5:
+            print &quot;i is greater than 5.&quot;
+
+// Output: i is greater than 0.
+//         i is less than 10.
+</code></pre>
+
+<h2 id="if-else-statement">If-Else Statement</h2>
+<p>With the <code>if</code> statement comes the <code>else</code> statement. It is called when your <code>if</code> statement's condition is <code>false</code>.</p>
+<pre><code class="boo">i = 5
+if i &gt; 5:
+    print &quot;i is greater than 5.&quot;
+else:
+    print &quot;i is less than or equal to 5.&quot;
+
+// Output: i is less than or equal to 5.
+</code></pre>
+
+<p>Quite simple.</p>
+<h2 id="if-elif-else-statement">If-Elif-Else Statement</h2>
+<p>Now <code>if</code> you want to check for a condition after your <code>if</code> is <code>false</code>, that is easy as well.
+This is done through the <code>elif</code> statement.</p>
+<pre><code class="boo">i = 5
+if i &gt; 5:
+    print &quot;i is greater than 5.&quot;
+elif i == 5:
+    print &quot;i is equal to 5.&quot;
+elif i &lt; 5:
+    print &quot;i is less than 5.&quot;
+
+// Output: i is equal to 5.
+</code></pre>
+
+<p>You can have one <code>if</code>, any number of <code>elif</code> s, and an optional <code>else</code>.</p>
+<h2 id="unless-statement">Unless Statement</h2>
+<p>The <code>unless</code> statement is handy if you want a readable way of checking if a condition is <strong>not</strong> true.</p>
+<pre><code class="boo">i = 5
+unless i == 5:
+    print &quot;i is not equal to 5.&quot;
+
+// Output: 
+</code></pre>
+
+<p>It didn't output because i was equal to 5 in that case.</p>
+<h2 id="statement-with-modifier">Statement with Modifier</h2>
+<p>Like in Ruby and Perl, you can follow a statement with a modifier.</p>
+<pre><code class="boo">i = 0
+print i
+i = 5 if true
+print i
+i = 10 unless true
+print i
+
+// Output: 0
+//         5
+//         5
+</code></pre>
+
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Don't use Statement with Modifier on a long line. In that case, you should just create a code block.
+A good rule of thumb is to not use it if the statement is more than 3 words long. This will keep your
+code readable and beautiful.</p>
+</div>
+<p>Some common conditionals:</p>
+<table><tbody>
+<tr>
+<th><p> Operator </p></th>
+<th><p> Meaning </p></th>
+<th><p> Example </p></th>
+</tr>
+<tr>
+<td><p> <code>==</code> </p></td>
+<td><p> equal </p></td>
+<td><p> <code>5 == 5</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>!=</code> </p></td>
+<td><p> not equal </p></td>
+<td><p> <code>0 != 5</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>&gt;</code> </p></td>
+<td><p> greater than </p></td>
+<td><p> <code>4 &gt; 2</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>&lt;</code> </p></td>
+<td><p> less than </p></td>
+<td><p> <code>2 &lt; 4</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>&gt;=</code> </p></td>
+<td><p> greater than or equal to </p></td>
+<td><p> <code>7 &gt;= 7 and 7 &gt;= 4</code> </p></td>
+</tr>
+<tr>
+<td><p> <code>&lt;=</code> </p></td>
+<td><p> less than or equal to </p></td>
+<td><p> <code>4 &lt;= 8 and 6 &lt;= 6</code> </p></td>
+</tr>
+</tbody></table>
+
+<h2 id="not-condition">Not Condition</h2>
+<p>To check if a condition is not true, you would use <code>not</code>.</p>
+<pre><code class="boo">i = 0
+if not i &gt; 5:
+    print &quot;i is not greater than 5&quot;
+
+// Output: i is not greater than 5
+</code></pre>
+
+<h2 id="combining-conditions">Combining Conditions</h2>
+<p>To check more than one condition, you would use <code>and</code> or <code>or</code>. Use parentheses ( ) to change the order of operations.</p>
+<pre><code class="boo">i = 5
+if i &gt; 0 and i &lt; 10:
+    print &quot;i is between 0 and 10.&quot;
+if i &lt; 3 or i &gt; 7:
+    print &quot;i is not between 3 and 7.&quot;
+if (i &gt; 0 and i &lt; 3) or (i &gt; 7 and i &lt; 10):
+    print &quot;i is either between 0 and 3 or between 7 and 10.&quot;
+
+// Output: i is between 0 and 10.
+</code></pre>
+
+<p>Note that <code>and</code> requires that both comparisons are true, while <code>or</code> requires that only one is true or both are true.</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>Given the numbers x = 4, y = 8, and z = 6, compare them and print the middle one.</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Loops/" class="btn btn-neutral float-right" title="Loops"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Variables/" class="btn btn-neutral" title="Variables"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2015, Boo authors</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Variables/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Loops/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
